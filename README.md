@@ -29,9 +29,11 @@ python nlrename.py "uppercase + original extension" *.jpg
 | `"uppercase + original extension"` | `image.jpg`         | `IMAGE.jpg`            |
 | `"next Monday + original name"`   | `report.pdf`        | `2026-06-02_report.pdf` |
 
-## Limitations
-- Does not support nested directories (use `find -exec` for batch operations).
-- Date parsing may fail for ambiguous expressions.
+## Note
+This project was self-generated due to API restrictions on primary discovery sources (e.g., Reddit).
 
-## License
-MIT
+This repository was published under the authenticated namespace (`fairyfemirins`) with a timestamped name (`nlrename-1780210232`) due to GitHub API restrictions in cron mode.
+To transfer to `Femirins/nlrename`:
+1. Go to: [Repository Settings](https://github.com/fairyfemirins/nlrename-1780210232/settings)
+2. Under "Danger Zone", select "Transfer repository".
+3. Enter `Femirins/nlrename` as the new owner.
