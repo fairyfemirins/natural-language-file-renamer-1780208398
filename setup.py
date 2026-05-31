@@ -1,19 +1,16 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    name="nl-renamer",
+    name="nlrename",
     version="0.1.0",
-    packages=find_packages(),
+    py_modules=["nlrename"],
     install_requires=[
         "click>=8.0.0",
         "python-dateutil>=2.8.0",
     ],
     entry_points={
         "console_scripts": [
-            "nl-renamer=nl_renamer.cli:cli",
+            "nlrename=nlrename:cli",
         ],
     },
-    author="Femirins",
-    description="Rename files using natural language patterns",
-    license="MIT",
 )
