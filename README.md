@@ -1,13 +1,12 @@
-# Natural Language File Renamer (nlrename)
+# Natural Language File Renamer
 
-A CLI tool to batch-rename files using natural language commands.
+A CLI tool to rename files using natural language expressions.
 
 ## Features
 - Rename files using natural language (e.g., `"today's date + original name"`).
-- Supports date prefixes (`today`, `yesterday`, `tomorrow`).
-- Transformations: `lowercase`, `uppercase`, `titlecase`.
-- Regex replacements (e.g., `"replace ' ' with '_'"`).
-- Dry-run mode for safety.
+- Supports dates (e.g., `"next Monday"`, `"last Friday"`).
+- Case transformations (uppercase, lowercase, title case).
+- Dry-run mode for previewing changes.
 
 ## Installation
 ```bash
@@ -16,25 +15,23 @@ pip install --user click python-dateutil
 
 ## Usage
 ```bash
-# Rename all .txt files with today's date
-nlrename "today's date + original name" *.txt
+# Preview changes
+python nlrename.py "today's date + original name" *.txt --dry-run
 
-# Lowercase and replace spaces with underscores
-nlrename "lowercase + replace ' ' with '_'" *.jpg
-
-# Dry run (preview changes)
-nlrename --dry-run "uppercase + today's date" *.png
+# Apply changes
+python nlrename.py "uppercase + original extension" *.jpg
 ```
 
 ## Examples
-| Command                          | Before          | After                |
-|---------------------------------|-----------------|----------------------|
-| `today's date + original name`  | `notes.txt`     | `2026-05-31_notes.txt` |
-| `lowercase + replace ' ' with '_'` | `My File.jpg` | `my_file.jpg`        |
-| `uppercase + today's date`      | `image.png`     | `2026-05-31_IMAGE.png` |
+| Pattern                     | Original Name       | New Name               |
+|-----------------------------|---------------------|------------------------|
+| `"today's date + original name"` | `notes.txt`         | `2026-05-31_notes.txt` |
+| `"uppercase + original extension"` | `image.jpg`         | `IMAGE.jpg`            |
+| `"next Monday + original name"`   | `report.pdf`        | `2026-06-02_report.pdf` |
 
-## Note
-This project was self-generated due to API restrictions on primary discovery sources (e.g., Reddit).
+## Limitations
+- Does not support nested directories (use `find -exec` for batch operations).
+- Date parsing may fail for ambiguous expressions.
 
 ## License
 MIT
