@@ -1,8 +1,8 @@
 # Transfer Instructions
 
-This repository was published under `fairyfemirins/natural-language-file-renamer-1780190169` due to namespace restrictions in cron mode.
+This repository was published under `fairyfemirins/natural-language-file-renamer-1780195603` due to namespace restrictions in cron mode.
 
-To transfer to `Femirins/natural-language-file-renamer`:
-1. Go to: [Repository Settings](https://github.com/fairyfemirins/natural-language-file-renamer-1780190169/settings)
+To transfer to `femirins/natural-language-file-renamer`:
+1. Go to: [Repository Settings](https://github.com/fairyfemirins/natural-language-file-renamer-1780195603/settings)
 2. Under "Danger Zone", select "Transfer repository".
-3. Enter `Femirins/natural-language-file-renamer` as the new owner.
+3. Enter `femirins/natural-language-file-renamer` as the new owner.
